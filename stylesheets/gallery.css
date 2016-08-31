@@ -1,0 +1,171 @@
+    .interfaces {
+        height: 386px; 
+        position: relative;
+
+        .centered-content {
+            z-index: 5;
+
+            ul {
+                width: 58%;
+                display: inline-block;
+                margin: 0;
+                list-style: none;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+               
+                li {
+                    font: 300 10px/12px Open Sans, Tahoma, Arial;
+                    float: left;
+                    color: #fff;
+                    opacity: .5;
+                    padding: 20px 22px;
+                    cursor: pointer;
+                    text-transform: uppercase;
+
+                    &:first-child { padding-left: 17px; }
+
+                    &:hover { opacity: 0.9; }
+                    &.active { border-bottom: solid #92aad1 4px; opacity: 1; }
+                }
+            }
+        }
+    }
+
+    .interfaces-gallery {
+        background: #f3f3f3;
+        padding-top: 88px;
+        margin-bottom: 100px;
+        position: relative;
+
+        .img-wrapper {
+            width: 1100px;
+            height: 595px;
+            float: left;
+            margin: 0 auto;
+            position: relative;
+
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+            -o-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+            -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+ 
+            .preloader {
+                display: none;
+                margin: 0 auto;
+                width: 180px;
+
+                &.active { display: block; }
+            }
+
+            img.interface {
+                width: 1100px;
+                height: 595px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+
+                -webkit-transition: opacity .9s ease;
+                -moz-transition: opacity .9s ease;
+                -ms-transition: opacity .9s ease;
+                -o-transition: opacity .9s ease;
+                transition: opacity .9s ease;
+
+                &.active { 
+                    opacity: 1; 
+                }
+            }
+        }
+
+        .next-prev {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 99;
+
+            .navigate {
+                width: 400px;
+                height: 595px;
+                cursor: pointer;
+                opacity: 0;
+                -webkit-transition: opacity .6s ease;
+                -moz-transition: opacity .6s ease;
+                -ms-transition: opacity .6s ease;
+                -o-transition: opacity .6s ease;
+                transition: opacity .6s ease;
+
+                &:hover { opacity: 1; }
+
+                &.next { 
+                    float: right;
+                    
+                    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(20,20,39,0.2) 100%); /* FF3.6-15 */
+                    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(20,20,39,0.2))); /* Chrome4-9,Safari4-5 */
+                    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(20,20,39,0.2) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(20,20,39,0.2) 100%); /* Opera 11.10-11.50 */
+                    background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(20,20,39,0.2) 100%); /* IE10 preview */
+                    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(20,20,39,0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#4d000000',GradientType=1 ); /* IE6-9 */
+
+                    svg {
+                        display: block;
+                        position: absolute;
+                        right: 50px;
+                        top: 260px;
+                    }
+                }
+
+                &.prev { 
+                    float: left;
+
+                    background: -moz-linear-gradient(left, rgba(20,20,39,0.2) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+                    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(20,20,39,0.2)), color-stop(100%,rgba(0,0,0,0))); /* Chrome4-9,Safari4-5 */
+                    background: -webkit-linear-gradient(left, rgba(20,20,39,0.2) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: -o-linear-gradient(left, rgba(20,20,39,0.2) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10-11.50 */
+                    background: -ms-linear-gradient(left, rgba(20,20,39,0.2) 0%,rgba(0,0,0,0) 100%); /* IE10 preview */
+                    background: linear-gradient(to right, rgba(20,20,39,0.2) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#4d000000',GradientType=1 ); /* IE6-9 */
+                
+                    svg {
+                        display: block;
+                        position: absolute;
+                        left: 50px;
+                        top: 260px;
+                    }
+                }
+            }
+        }
+
+        .slidernav {
+            list-style-type: none;
+            display: inline;
+            margin: 49px 0 0 0;
+            float: left;
+            width: 60%;
+
+            .button-g {
+                width: 36px;
+                height: 13px;
+                background-color: #dcdce0;
+                float: left;
+                margin-right: 2px;
+                cursor: pointer;
+                /*opacity: 0.16;*/
+                -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=16)";
+
+                -webkit-transition: background-color .3s ease;
+                -moz-transition: background-color .3s ease;
+                -ms-transition: background-color .3s ease;
+                -o-transition: background-color .3s ease;
+                transition: background-color .3s ease;
+
+                &.active, &:hover {
+                background-color: #75729a;
+                    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                }
+
+            }
+        }
+    }
